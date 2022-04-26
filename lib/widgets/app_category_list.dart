@@ -18,11 +18,11 @@ class AppCategoryList extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Category',
+              const Text('Category',
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold)),
               Text('See More',
@@ -35,15 +35,15 @@ class AppCategoryList extends StatelessWidget {
         ),
         Container(
           height: 100,
-          margin: EdgeInsets.only(left: 10),
+          margin: const EdgeInsets.only(left: 10),
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: categories.length,
               itemBuilder: (context, index) {
                 return Container(
                   width: 100,
-                  margin: EdgeInsets.only(top: 10, right: 10),
-                  padding: EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(top: 10, right: 10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     border: Border.all(
                         color: Colors.grey.withOpacity(0.2), width: 2),
@@ -54,7 +54,7 @@ class AppCategoryList extends StatelessWidget {
                     children: [
                       Icon(categories[index].icon, color: mainColor),
                       Text(categories[index].category,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
                           ))

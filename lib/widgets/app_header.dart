@@ -8,7 +8,7 @@ class AppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: 30,
         top: 30,
         right: 30,
@@ -20,7 +20,7 @@ class AppHeader extends StatelessWidget {
                 width: 50,
                 height: 50,
                 fit: BoxFit.cover)),
-        title: Text('Hello, Roman',
+        title: const Text('Hello, Roman',
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         subtitle: Text('Good morning',
             style: TextStyle(color: mainColor, fontSize: 12)),

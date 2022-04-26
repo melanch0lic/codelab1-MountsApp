@@ -23,7 +23,7 @@ class MountsApp extends StatelessWidget {
               size: 40,
             ),
           ),
-          actions: [
+          actions: const [
             SizedBox(
               width: 40,
               height: 40,
@@ -32,10 +32,10 @@ class MountsApp extends StatelessWidget {
         ),
         drawer: Drawer(
           child: Container(
-            padding: EdgeInsets.all(30),
+            padding: const EdgeInsets.all(30),
             color: mainColor,
             alignment: Alignment.bottomLeft,
-            child: Icon(Icons.terrain, color: Colors.white, size: 80),
+            child: const Icon(Icons.terrain, color: Colors.white, size: 80),
           ),
         ),
         body: Column(
@@ -47,7 +47,7 @@ class MountsApp extends StatelessWidget {
               child: AppMountListView(),
             ),
             AppCategoryList(mainColor),
-            AppBottomBar(),
+            const AppBottomBar(),
           ],
         ));
   }

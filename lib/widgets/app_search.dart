@@ -8,18 +8,18 @@ class AppSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(30),
+      padding: const EdgeInsets.all(30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Discover',
             style: TextStyle(
               fontWeight: FontWeight.w900,
               fontSize: 25,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -27,12 +27,12 @@ class AppSearch extends StatelessWidget {
               Expanded(
                 child: Container(
                   height: 50,
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Row(children: [
+                  child: Row(children: const [
                     Icon(Icons.search, color: Colors.grey),
                     SizedBox(width: 10),
                     Text('Search', style: TextStyle(color: Colors.grey))
@@ -40,13 +40,13 @@ class AppSearch extends StatelessWidget {
                 ),
               ),
               Container(
-                  margin: EdgeInsets.only(left: 10),
+                  margin: const EdgeInsets.only(left: 10),
                   width: 50,
                   height: 50,
                   decoration: BoxDecoration(
                       color: mainColor,
                       borderRadius: BorderRadius.circular(10)),
-                  child: Icon(Icons.tune, color: Colors.white))
+                  child: const Icon(Icons.tune, color: Colors.white))
             ],
           )
         ],

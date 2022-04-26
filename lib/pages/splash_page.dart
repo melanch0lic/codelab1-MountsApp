@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'landing_page.dart';
 
-final Color mainColor = Color(0xFFFF5656);
+final Color mainColor = const Color(0xFFFF5656);
 
 class SplashPage extends StatelessWidget {
   @override

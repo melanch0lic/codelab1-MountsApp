@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../pages/details_page.dart';
+
 import '../models/mount.dart';
 
 class AppMountListView extends StatelessWidget {
@@ -42,33 +44,41 @@ class AppMountListView extends StatelessWidget {
               'Popocatépetl is an active stratovolcano located in the states of Puebla, Morelos, and Mexico in central Mexico. It lies in the eastern half of the Trans-Mexican volcanic belt. At 5,426 m it is the second highest peak in Mexico, after Citlaltépetl at 5,636 m.',
           location: 'Mexico')
     ];
-    return Container(
+    return SizedBox(
       height: 150,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: mountItems.length,
           itemBuilder: (context, index) {
-            return Container(
-              alignment: Alignment.bottomLeft,
-              padding: EdgeInsets.all(20),
-              margin: EdgeInsets.all(10),
-              width: 150,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  image: DecorationImage(
-                    image: NetworkImage(mountItems[index].path),
-                    fit: BoxFit.cover,
-                  )),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(mountItems[index].name,
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold)),
-                  Text(mountItems[index].location,
-                      style: TextStyle(color: Colors.white))
-                ],
+            MountModel currentMount = mountItems[index];
+
+            return GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DetailsPage(currentMount)));
+              },
+              child: Container(
+                alignment: Alignment.bottomLeft,
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(10),
+                width: 150,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    image: DecorationImage(
+                      image: NetworkImage(mountItems[index].path),
+                      fit: BoxFit.cover,
+                    )),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(mountItems[index].name,
+                        style: const TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold)),
+                    Text(mountItems[index].location,
+                        style: const TextStyle(color: Colors.white))
+                  ],
+                ),
               ),
             );
           }),

@@ -21,8 +21,8 @@ class _AppBottomBarState extends State<AppBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(top: 20),
-        padding: EdgeInsets.all(20),
+        margin: const EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(color: Colors.white, boxShadow: [
           BoxShadow(
               color: Colors.black.withOpacity(0.1),
@@ -44,9 +44,9 @@ class _AppBottomBarState extends State<AppBottomBar> {
                     color: Color(0xFFFF5656)),
                 child: Row(children: [
                   Icon(currentBarItem.icon, color: Colors.white),
-                  SizedBox(width: 5),
+                  const SizedBox(width: 5),
                   Text(currentBarItem.label,
-                      style: TextStyle(color: Colors.white))
+                      style: const TextStyle(color: Colors.white))
                 ]),
               );
             } else {
